@@ -251,16 +251,16 @@ foreach (var item in consulta15)
 Console.WriteLine("");
 Console.WriteLine("Suma de sueldos.");
 
-var sueldosJuntos = Persona.Where(x=>x.sueldo == x.sueldo).Sum(x=>x.sueldo);
-Console.WriteLine(sueldosJuntos);
+var consulta16 = Persona.Where(x=>x.sueldo == x.sueldo).Sum(x=>x.sueldo);
+Console.WriteLine(consulta16);
 Console.WriteLine("");
 Console.WriteLine("Saber cual es el sueldo medio.");
 
-var sueldoMedio = Persona.Where(x => x.sueldo == x.sueldo).Average(x => x.sueldo);
-Console.WriteLine(sueldoMedio);
+var consulta17 = Persona.Where(x => x.sueldo == x.sueldo).Average(x => x.sueldo);
+Console.WriteLine(consulta17);
 
 
-var consulta16 =
+var consulta18 =
     from text in Persona
     where text.fechaNacimiento.Year < (2024 - 18) && text.sueldo % 2 == 0
     orderby (text.sueldo) 
@@ -268,7 +268,7 @@ var consulta16 =
 Console.WriteLine("");
 Console.WriteLine("Ordenar por sueldo, para aquellos mayores de edad que tienen un sueldo par.");
 
-foreach (var item in consulta16)
+foreach (var item in consulta18)
 {
     Console.WriteLine($"{item.nombre} nacido el {item.fechaNacimiento.ToShortDateString()} con sueldo: {item.sueldo}");
 }

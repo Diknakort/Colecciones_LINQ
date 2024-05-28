@@ -20,6 +20,6 @@ namespace ConsoleColecciones
     }
     //public override string? ToString()
     //{
-    //    return ($"La unidad seleccionada es: {Nombre}");
+    //    return Console.WriteLine($"{item.nombre} nacido el {item.fechaNacimiento.ToShortDateString()} con sueldo: {item.sueldo}");
     //}
 }
